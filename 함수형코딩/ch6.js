@@ -41,3 +41,14 @@ function shift(array){
     array: array_copy
   }
 }
+
+function setPriceByName(cart, name, price){
+  var cartCopy = cart.slice();
+  for(var i = 0; i < cartCopy.length; i++){
+    if(cartCopy[i].name === name){
+      cartCopy[i] = setPrice(cartCopy[i], price);
+    }
+    return cartCopy;
+  }
+}
+
