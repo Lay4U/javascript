@@ -47,3 +47,104 @@ function objectSet(object, key, value) {
   copy[key] = value;
   return copy;
 }
+
+function cookAndEatFood(){
+  for(var i = 0; i < foods.length; i++){
+    var food = foods[i];
+    cook(food);
+    eat(food);
+  }
+}
+
+function cleanDishes() {
+  for(var i = 0; i < dishes.length; i++){
+    var dish = dishes[i];
+    wash(dish);
+    dry(dish);
+    putAway(dish);
+  }
+}
+
+function cookAndEatArray(array){
+  for(var i = 0; i < array.length; i++){
+    var item = array[i];
+    cook(item);
+    eat(item);
+  }
+}
+
+function cleanDishes(array) {
+  for(var i = 0; i < array.length; i++){
+    var item = array[i];
+    wash(item);
+    dry(item);
+    putAway(item);
+  }
+}
+
+
+
+function cookAndEatArray(array){
+  for(var i = 0; i < array.length; i++){
+    var item = array[i];
+    cookAndEat(item);
+  }
+}
+function cookAndEat(food){
+  cook(food);
+  eat(food);
+}
+
+
+
+function cleanDishes(array) {
+  for(var i = 0; i < array.length; i++){
+    var item = array[i];
+    clean(item);
+  }
+}
+function clean(dish){
+  wash(dish);
+  dry(dish);
+  putAway(dish);
+}
+
+
+
+
+function operateOnArray(array, f){
+  for(var i = 0; i < array.length; i++){
+    var item = array[i];
+    f(item);
+  }
+}
+function cookAndEat(food){
+  cook(food);
+  eat(food);
+}
+
+
+
+function operateOnArray(array, f) {
+  for(var i = 0; i < array.length; i++){
+    var item = array[i];
+    f(item);
+  }
+}
+function clean(dish){
+  wash(dish);
+  dry(dish);
+  putAway(dish);
+}
+
+operateOnArray(foods, cookAndEat);
+operateOnArray(dishes, clean);
+
+function forEach(array, f){
+  for(var i = 0; i <array.length; i++){
+    var item = array[i];
+    f(item);
+  }
+}
+// replace body with callback
+
