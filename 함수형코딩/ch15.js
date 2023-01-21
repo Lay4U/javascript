@@ -7,7 +7,7 @@ function add_item_to_cart(name, price, quantity) {
 
 function calc_cart_total(cart, callback){
   var total = 0;
-  const ajax(cart, function(cost) {
+  cost_ajax(cart, function(cost) {
     total += cost;
     shipping_ajax(cart, function(shipping){
       total += shipping;
